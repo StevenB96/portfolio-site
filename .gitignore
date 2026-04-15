@@ -1,0 +1,43 @@
+# dependencies
+node_modules/
+
+# production build output
+dist/
+
+# local environment files
+.env
+.env.*
+!.env.example
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sln
+*.user
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# coverage / testing
+coverage/
+
+# optional cache directories
+.cache/
+.temp/
+tmp/
+
+# Docker override files if used locally
+docker-compose.override.yml
