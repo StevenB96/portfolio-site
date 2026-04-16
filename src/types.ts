@@ -4,12 +4,18 @@ export interface ExternalLink {
   text: string;
 }
 
+export interface ActionLink {
+  label: string;
+  url: string;
+}
+
 export interface CardItem {
   id: string;
   title: string;
   text: string;
   imageUrl: string;
   redirectUrl?: string;
+  links?: ActionLink[];
 }
 
 export interface SimpleItem {
@@ -44,5 +50,5 @@ export interface PortfolioData {
 }
 
 export interface Links {
-  [key: string]: string;
+  [key: string]: string | undefined;
 }
