@@ -73,9 +73,8 @@ a {
 .hero {
   padding: 1rem;
   color: #ffffff;
-  background:
-    linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(30, 41, 59, 0.68)),
-    url("https://picsum.photos/seed/steven-berrisford-hero/1600/900") center / cover no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero__inner {
@@ -191,7 +190,6 @@ a {
   border-radius: 24px;
   background-size: cover;
   background-position: center;
-  border: 1px solid rgba(255, 255, 255, 0.32);
   box-shadow: 0 18px 50px rgba(15, 23, 42, 0.14);
   isolation: isolate;
   padding-top: 200px;

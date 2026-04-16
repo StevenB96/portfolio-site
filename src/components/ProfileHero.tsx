@@ -6,9 +6,12 @@ interface ProfileHeroProps {
 
 export function ProfileHero({ person }: ProfileHeroProps) {
   const phoneHref = `tel:${person.phone.replace(/\s+/g, "")}`;
+  const styles = {
+    backgroundImage: `url(${person.backgroundImage})`
+  };
 
   return (
-    <header id="top" className="hero">
+    <header id="top" className="hero" style={styles}>
       <div className="hero__inner">
         <div className="hero__eyebrow">Last updated in {person.lastUpdated}</div>
 

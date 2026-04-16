@@ -1,5 +1,24 @@
 import { PortfolioData } from "../types";
 
+import frameworksImg from "../assets/png/frameworks.png";
+import databasesImg from "../assets/png/databases.png";
+import devopsToolsImg from "../assets/png/devops-tools.png";
+import cloudPlatformsImg from "../assets/png/cloud-platforms.png";
+import softwareDevelopmenMethologiesImg from "../assets/png/software-development-methologies.png";
+import generativeAIImg from "../assets/png/generative-ai.png";
+import jnrLevelDeveloperImg from "../assets/png/jnr-level-developer.png";
+import midLevelDeveloperImg from "../assets/png/mid-level-developer.png";
+import observabilityImg from "../assets/png/observability.png";
+import aiBusinessAutomationImg from "../assets/png/ai-business-automation.png";
+import systemAdministratorImg from "../assets/png/system-administrator.png";
+import awsCloudPractitionerImg from "../assets/png/aws-cloud-practitioner.png";
+import softwareBackgroundImg from "../assets/jpg/software-background.jpg";
+import fullStackDevelopmentImg from "../assets/jpg/full-stack-development.jpg";
+import technicalDrawingImg from "../assets/jpg/technical-drawing.jpg";
+import blizzardImg from "../assets/jpg/blizzard.jpg";
+import finanicalSystemsImg from "../assets/jpg/finanical-systems.jpg";
+import filmSetImg from "../assets/jpg/film-set.jpg";
+
 const img = (seed: string) => `https://picsum.photos/seed/${seed}/1200/800`;
 
 export const defaultPortfolio: PortfolioData = {
@@ -8,6 +27,7 @@ export const defaultPortfolio: PortfolioData = {
     lastUpdated: "Apr 2026",
     headline:
       "Full Stack Software Developer | AWS Cloud & Generative AI Specialist | Delivering Scalable Applications",
+    backgroundImage: softwareBackgroundImg,
     location: "United Kingdom",
     email: "stevenberrisford@gmail.com",
     phone: "(+44) 07891078922",
@@ -31,7 +51,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "mid-level-developer",
       title: "Mid-Level Developer, Scorchsoft Ltd",
-      imageUrl: "https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg",
+      imageUrl: midLevelDeveloperImg,
       redirectUrl: "https://www.scorchsoft.com/",
       text: `July 2022 – Sept 2023
 
@@ -51,7 +71,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "junior-developer",
       title: "Junior Developer, Scorchsoft Ltd",
-      imageUrl: "https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg",
+      imageUrl: jnrLevelDeveloperImg,
       redirectUrl: "https://www.scorchsoft.com/",
       text: `Sept 2020 – July 2022
 
@@ -67,7 +87,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "masters-mechanical-engineering",
       title: "University of Exeter, Master's Degree in Mechanical Engineering",
-      imageUrl: "https://cdn.pixabay.com/photo/2018/04/16/11/32/technical-drawing-3324368_1280.jpg",
+      imageUrl: technicalDrawingImg,
       redirectUrl: "https://engineering.exeter.ac.uk/research/",
       text: `Sept 2015 – May 2019
       
@@ -79,7 +99,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "research-bursary-weather-system",
       title: "University of Exeter, Research Bursary in Extreme Weather Generation System",
-      imageUrl: "https://cdn.pixabay.com/photo/2013/03/09/15/21/blizzard-91896_1280.jpg",
+      imageUrl: blizzardImg,
       redirectUrl: "https://engineering.exeter.ac.uk/research/",
       text: `May 2018 – Aug 2018
 
@@ -93,7 +113,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "frameworks",
       title: "Frameworks",
-      imageUrl: img("expert-frameworks"),
+      imageUrl: frameworksImg,
       text: `Expert:
       Django, Flask, React, React Native, Express, Laravel, Next.js
 
@@ -103,7 +123,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "databases",
       title: "Databases",
-      imageUrl: "https://cdn.pixabay.com/photo/2016/09/03/14/55/info-1641937_1280.jpg",
+      imageUrl: databasesImg,
       text: `Expert:
       MySQL, PostgreSQL, SQLite, DynamoDB, MongoDB, Data modelling and schema design
 
@@ -113,7 +133,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "devops-tools",
       title: "DevOps Tools",
-      imageUrl: img("expert-devops-tools"),
+      imageUrl: devopsToolsImg,
       text: `Expert:
       Docker, Bitbucket, Github Actions workflows, Jira, Kubernetes, Jaeger, OpenTelemetry, AWS ECS, EC2, CodePipeline, ECR
 
@@ -123,7 +143,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "methodologies",
       title: "Methodologies",
-      imageUrl: img("expert-devops-tools"),
+      imageUrl: softwareDevelopmenMethologiesImg,
       text: `Expert:
       Scrum, Agile, Code Review, CI/CD, Microservices, Kanban
 
@@ -133,7 +153,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "cloud-platforms",
       title: "Cloud Platforms",
-      imageUrl: img("expert-devops-tools"),
+      imageUrl: cloudPlatformsImg,
       text: `Expert:
       AWS, Google Cloud
 
@@ -143,7 +163,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "generative-ai",
       title: "Generative AI",
-      imageUrl: img("expert-devops-tools"),
+      imageUrl: generativeAIImg,
       text: `Expert:
       Prompt engineering, multi-provider LLM integration, RAG, output validation, prompt-injection mitigation, PII redaction
 
@@ -156,7 +176,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "administration-systems",
       title: "Administration Systems",
-      imageUrl: "https://cdn.pixabay.com/photo/2017/11/24/10/43/ticket-2974645_1280.jpg",
+      imageUrl: systemAdministratorImg,
       redirectUrl: "https://github.com/StevenB96",
       text: `Two seperate projects mirror the functionality I worked with at Scorchsoft, but use alternative technologies to demonstrate adaptability across stacks.
       • Built two equivalent systems using different modern stacks: a Django + MongoDB-based Prescription Manager & OAuth Identity Provider and a Next.js + full-stack TypeScript Theatre Ticket Booking App.
@@ -169,7 +189,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "ai-business-workflow-portfolio",
       title: "AI Business Workflow Portfolio",
-      imageUrl: img("ai-workflow-portfolio"),
+      imageUrl: aiBusinessAutomationImg,
       redirectUrl: "https://github.com/StevenB96/ai-sdlc-workflow-projects",
       text: `Shows AI supporting real business workflows using a practical, lightweight stack.
       • Built two AI workflow projects: AI Incident Triage & Release Notes API for technical users and AI Feedback Operations Hub for non-technical users.
@@ -180,7 +200,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "cloud-native-observability-&-event-driven-etl-in-kubernetes",
       title: "Cloud-Native Observability & Event-Driven ETL in Kubernetes",
-      imageUrl: img("observability-etl-demo-project"),
+      imageUrl: observabilityImg,
       redirectUrl: "https://github.com/StevenB96/obs-etl-k8s-demo-project",
       text: `Showcases enterprise-grade telemetry, event-driven processing, and automated data pipelines.
       • Built a cloud-native Flask system integrated with Kafka to generate work requests and emit telemetry.
@@ -193,7 +213,7 @@ export const defaultPortfolio: PortfolioData = {
         {
       id: "ai-tooling-&-risk-mitigation-in-financial-systems",
       title: "AI Tooling & Risk Mitigation in Financial Systems",
-      imageUrl: img("observability-etl-demo-project"),
+      imageUrl: finanicalSystemsImg,
       redirectUrl: "https://github.com/StevenB96/ai_tool-risk_mitigation-demo-project",
       text: `Demonstrates hardened, production-ready AI systems for regulated financial environments.
       • Built a full-stack Flask app with a layered architecture across interface, logic, data, validation, and domain layers.
@@ -204,7 +224,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "movie-predictor",
       title: "Movie Predictor",
-      imageUrl: "https://cdn.pixabay.com/photo/2014/10/12/09/21/filmset-485517_1280.jpg",
+      imageUrl: filmSetImg,
       redirectUrl: "https://github.com/StevenB96/aws-etl-project",
       text: `Developed a Flask web and Extract, Transform, Load (ETL) profit prediction application.
       • Implemented Docker containerization for consistent deployment.
@@ -253,7 +273,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "skills-bootcamp-cloud-aws",
       title: "Skills Bootcamp in Cloud (AWS)",
-      imageUrl: img("skills-bootcamp-cloud-aws"),
+      imageUrl: awsCloudPractitionerImg,
       text: `Oct 2023 – Feb 2024
       • Covered AWS Cloud Practitioner fundamentals: including the shared responsibility model, IAM, security, deployments, operations, and billing concepts. 
       • Completed a major personal project and group presentation: applying AWS concepts to practical, real-world scenarios. `,
@@ -261,7 +281,7 @@ export const defaultPortfolio: PortfolioData = {
     {
       id: "full-stack-web-development-course",
       title: "Full Stack Web Development Course",
-      imageUrl: img("full-stack-web-development-course"),
+      imageUrl: fullStackDevelopmentImg,
       text: `Mar 2020 – June 2020
 
       • Developed core software engineering skills: programming, web development, databases, frameworks, libraries, APIs, and foundational data engineering and machine learning concepts. 

@@ -21,6 +21,7 @@ export interface SimpleItem {
 
 export interface PersonInfo {
   name: string;
+  backgroundImage: string;
   lastUpdated: string;
   headline: string;
   location: string;

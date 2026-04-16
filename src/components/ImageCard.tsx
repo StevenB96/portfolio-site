@@ -5,17 +5,15 @@ interface ImageCardProps {
 }
 
 export function ImageCard({ item }: ImageCardProps) {
-  const style = {
-    backgroundImage: `url("${item.imageUrl}")`,
-  };
+  const style = item.imageUrl
+    ? { backgroundImage: `url(${item.imageUrl})` }
+    : undefined;
 
   const content = (
-    <>
-      <div className="image-card__content">
-        <h3 className="image-card__title">{item.title}</h3>
-        <p className="image-card__text">{item.text}</p>
-      </div>
-    </>
+    <div className="image-card__content">
+      <h3 className="image-card__title">{item.title}</h3>
+      <p className="image-card__text">{item.text}</p>
+    </div>
   );
 
   if (item.redirectUrl) {
