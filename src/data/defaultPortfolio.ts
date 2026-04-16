@@ -1,4 +1,7 @@
-import { PortfolioData } from "../types";
+import { 
+  PortfolioData, 
+  Links  
+} from "../types";
 
 import frameworksImg from "../assets/png/frameworks.png";
 import databasesImg from "../assets/png/databases.png";
@@ -19,7 +22,9 @@ import blizzardImg from "../assets/jpg/blizzard.jpg";
 import finanicalSystemsImg from "../assets/jpg/finanical-systems.jpg";
 import filmSetImg from "../assets/jpg/film-set.jpg";
 
-const img = (seed: string) => `https://picsum.photos/seed/${seed}/1200/800`;
+const redirectlinks: Links = {
+  adminUrl: import.meta.env.VITE_ADMIN_SYSTEM1_URL
+}
 
 export const defaultPortfolio: PortfolioData = {
   person: {
@@ -177,7 +182,7 @@ export const defaultPortfolio: PortfolioData = {
       id: "administration-systems",
       title: "Administration Systems",
       imageUrl: systemAdministratorImg,
-      redirectUrl: "https://github.com/StevenB96",
+      redirectUrl: redirectlinks.adminUrl,
       text: `Two seperate projects mirror the functionality I worked with at Scorchsoft, but use alternative technologies to demonstrate adaptability across stacks.
       • Built two equivalent systems using different modern stacks: a Django + MongoDB-based Prescription Manager & OAuth Identity Provider and a Next.js + full-stack TypeScript Theatre Ticket Booking App.
       • Demonstrated technology portability: applied equivalent architectural patterns across different stacks.

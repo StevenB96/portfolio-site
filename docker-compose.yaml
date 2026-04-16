@@ -1,6 +1,12 @@
 services:
-  app:
-    image: stevenb1996/portfolio-site:${IMAGE_TAG}
+  portfolio:
+    image: ${PORTFOLIO_IMAGE}:${PORTFOLIO_TAG}
     ports:
-      - "${HOST_PORT}:80"
-    restart: unless-stopped
+      - "${PORTFOLIO_HOST_PORT}:${PORTFOLIO_INTERNAL_PORT}"
+    depends_on:
+      - admin-system1
+
+  admin-system1:
+    image: ${ADMIN_SYSTEM1_IMAGE}:${ADMIN_SYSTEM1_TAG}
+    ports:
+      - "${ADMIN_SYSTEM1_HOST_PORT}:${ADMIN_SYSTEM1_INTERNAL_PORT}"

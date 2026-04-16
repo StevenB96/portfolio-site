@@ -42,3 +42,7 @@ export interface PortfolioData {
   languages: SimpleItem[];
   interests: SimpleItem[];
 }
+
+export interface Links {
+  [key: string]: string;
+}
