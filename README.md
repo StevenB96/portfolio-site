@@ -134,7 +134,7 @@ The project uses these scripts:
 ## Example Docker Commands
 
 - docker compose -p portfolio-platform --env-file ./envs/dev/.env.docker-compose.dev up -d
-- docker build --build-arg BUILD_MODE=dev -t stevenb1996/portfolio-site:latest .
+- docker build --build-arg BUILD_MODE=dev --build-arg VITE_ADMIN_SYSTEM_1_URL=http://localhost:3001 -t stevenb1996/portfolio-site:latest .
 
 
 

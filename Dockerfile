@@ -3,8 +3,12 @@ FROM node:22-alpine AS builder
 
 WORKDIR /app
 
-# Build argument with default
+# Build arguments
 ARG BUILD_MODE=dev
+ARG VITE_ADMIN_SYSTEM_1_URL=http://localhost:3001/
+
+# Convert ARG → ENV
+ENV VITE_ADMIN_SYSTEM_1_URL=$VITE_ADMIN_SYSTEM_1_URL
 
 COPY package*.json ./
 RUN npm ci
