@@ -23,7 +23,7 @@ import finanicalSystemsImg from "../assets/jpg/finanical-systems.jpg";
 import filmSetImg from "../assets/jpg/film-set.jpg";
 
 const redirectlinks: Links = {
-  adminSystem1Url: import.meta.env.VITE_ADMIN_SYSTEM1_URL
+  adminSystem1Url: import.meta.env.VITE_ADMIN_SYSTEM_1_URL
 }
 
 export const defaultPortfolio: PortfolioData = {

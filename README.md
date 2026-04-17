@@ -131,7 +131,35 @@ The project uses these scripts:
 }
 ```
 
----
+
+
+
+
+
+
+docker compose -p portfolio-platform --env-file ./envs/dev/.env.docker-compose.dev up -d
+
+docker build --build-arg BUILD_MODE=dev -t stevenb1996/portfolio-site:latest .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ---
 
 ## Project Structure
 
@@ -548,4 +576,4 @@ If you want, I can also give you:
 1. a **matching `Dockerfile`**
 2. a **matching `nginx.conf`**
 3. a **`docker-compose.yml`**
-4. a **shorter professional README version for GitHub**
+4. a **shorter professional README version for GitHub** -->

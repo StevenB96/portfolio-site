@@ -1,12 +1,32 @@
 services:
-  portfolio:
+  portfolio-site:
     image: ${PORTFOLIO_IMAGE}:${PORTFOLIO_TAG}
+    container_name: ${PORTFOLIO_CONTAINER_NAME}
     ports:
       - "${PORTFOLIO_HOST_PORT}:${PORTFOLIO_INTERNAL_PORT}"
+    env_file:
+      - envs/${DEPLOYMENT_ENV}/.env.portfolio-site.${DEPLOYMENT_ENV}
     depends_on:
-      - admin-system1
+      - admin-system-1
 
-  admin-system1:
-    image: ${ADMIN_SYSTEM1_IMAGE}:${ADMIN_SYSTEM1_TAG}
+  admin-system-1:
+    image: ${ADMIN_SYSTEM_1_IMAGE}:${ADMIN_SYSTEM_1_TAG}
+    container_name: ${ADMIN_SYSTEM_1_NAME}
     ports:
-      - "${ADMIN_SYSTEM1_HOST_PORT}:${ADMIN_SYSTEM1_INTERNAL_PORT}"
+      - "${ADMIN_SYSTEM_1_HOST_PORT}:${ADMIN_SYSTEM_1_INTERNAL_PORT}"
+    env_file:
+      - envs/${DEPLOYMENT_ENV}/.env.admin-system-1.${DEPLOYMENT_ENV}
+    depends_on:
+      - mysql-db
+
+  mysql-db:
+    image: mysql:${MYSQL_VERSION}
+    container_name: ${MYSQL_CONTAINER_NAME}
+    restart: unless-stopped
+    env_file:
+      - envs/${DEPLOYMENT_ENV}/.env.mysql-db.${DEPLOYMENT_ENV}
+    volumes:
+      - ${MYSQL_VOLUME}:/var/lib/mysql
+      - ${MYSQL_INIT_PATH}:/docker-entrypoint-initdb.d
+    ports:
+      - "${MYSQL_HOST_PORT}:3306"

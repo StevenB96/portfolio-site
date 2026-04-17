@@ -4,10 +4,15 @@ node_modules/
 # production build output
 dist/
 
+# MySQL runtime data / sockets
+mysql-data/
+*.sock
+
 # local environment files
 .env
 .env.*
 !.env.example
+!envs/example/**
 
 # logs
 npm-debug.log*
